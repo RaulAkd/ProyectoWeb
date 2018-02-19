@@ -168,6 +168,7 @@
     <Compile Include="Controllers\EcosystemController.cs" />
     <Compile Include="Controllers\FController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InformaciónAnimalesController.cs" />
     <Compile Include="Controllers\JuegoSonidosController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
@@ -310,6 +311,13 @@
     <Content Include="Views\Play\Index.cshtml" />
     <Content Include="Views\JuegoSonidos\Index.cshtml" />
     <Content Include="Views\F\Index.cshtml" />
+    <Content Include="Views\InformaciónAnimales\Index.cshtml" />
+    <Content Include="Views\InformaciónAnimales\IndexCondor.cshtml" />
+    <Content Include="Views\InformaciónAnimales\IndexEspin.cshtml" />
+    <Content Include="Views\InformaciónAnimales\IndexOso.cshtml" />
+    <Content Include="Views\InformaciónAnimales\IndexPinguino.cshtml" />
+    <Content Include="Views\InformaciónAnimales\IndexPuma.cshtml" />
+    <Content Include="Views\InformaciónAnimales\IndexCarpintero.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
