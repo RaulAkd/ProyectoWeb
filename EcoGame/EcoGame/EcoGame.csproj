@@ -166,7 +166,6 @@
     <Compile Include="Controllers\AnimalController.cs" />
     <Compile Include="Controllers\AnimalEcosystemDetailController.cs" />
     <Compile Include="Controllers\EcosystemController.cs" />
-    <Compile Include="Controllers\FController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InformaciónAnimalesController.cs" />
     <Compile Include="Controllers\JuegoSonidosController.cs" />
@@ -230,6 +229,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\0.png" />
     <Content Include="Images\1.png" />
     <Content Include="Images\10.png" />
     <Content Include="Images\11.png" />
