@@ -1,18 +1,49 @@
-﻿<div class="jumbotron" style="background-color:white; opacity: 0.8;">
-    @{
+﻿    @{
         ViewBag.Title = "Home Page";
     }
+
+    <style>
+        p{
+            text-align:justify;
+        }
+        nav{
+            background-color:black; 
+            opacity: 0.8;
+        }
+    </style>
+
+    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+        <a class="navbar-brand" href="http://localhost:51628/Home/Index">Inicio</a>
+        <a class="navbar-brand" href="http://localhost:51628/Home/About">Acerca de nosotros</a>
+        <a class="navbar-brand" href="http://localhost:51628/Home/Contact">Contáctanos</a>
+    </nav>
+
+
+<div class="jumbotron" style="background-color:white; opacity: 0.8;">
 
     <table style="width:100%">
         <tr>
             <td>
                 <div class="jumbotron">
-                    <h1>Jugando con animales</h1>
-                    <h2 class="lead">Juego desarrollado para el museo de historia natural "Gustavo Orces V."</h2>
+                    <h1>Museo de Historia Natural "Gustavo Orces V."</h1>
+                    <h2 class="lead">Museo de historia natural "Gustavo Orces V." de la Escuela Politécnica Nacional</h2>
                     <p style="color:black">
-                        El siguiente juego fue desarrollado por estudiantes de la EPN, para formar conocimiento de manera interactiva.
+                        La Escuela Politécnica Nacional (EPN), a través del Museo se encuentra empeñada en contribuir con la educación ambiental, sensibilización y concientización de los estudiantes y público en general. En pocas horas de visita al Museo podrán tener una visión más exacta de la naturaleza ecuatoriana, la biodiversidad, los ecosistemas, la problemática ambiental, como base para la conservación y uso sustentable de los recursos naturales.
                     </p>
-                    <p><a href="http://www.epn.edu.ec/museo-de-historia-natural/" target="_blank" class="btn btn-primary btn-lg">Leer mas &raquo;</a></p>
+                    <p><a href="http://www.epn.edu.ec/museo-de-historia-natural/" target="_blank" class="btn btn-primary btn-lg">Mayor información &raquo;</a></p>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="jumbotron">
+                    <h1>Aprende sobre los animales</h1>
+                    <h2 class="lead">Aprende más sobre los animales</h2>
+                    <center>
+                        <img class="img-responsive" src="~/Images/panelAnimales.jpg" />
+                        <br />
+                    </center>
+                    <p><a href="http://localhost:51628/InformaciónAnimales/Index" target="_blank" class="btn btn-primary btn-lg">Aprender &raquo;</a></p>
                 </div>
             </td>
         </tr>
@@ -20,19 +51,12 @@
             <td>
                 <div class="jumbotron">
                     <h1>Jugando con los animales</h1>
-                    <a href=""><img class="img-responsive" src="~/Images/panelJuego.jpg" /></a>
-                    <br />
-                    <a href="http://localhost:51628/JuegoSonidos/Index" class="btn btn-primary btn-lg">JUEGO SONIDOS</a>
-                </div>
-            </td>
-        </tr>
-        <tr>
-                <td>
-                <div class="jumbotron">
-                    <h1>Aprende sobre los animales</h1>
-                    <a href=""><img class="img-responsive" src="~/Images/panelAnimales.jpg" /></a>
-                    <br />
-                    <p><a href="http://localhost:51628/InformaciónAnimales/Index" target="_blank" class="btn btn-primary btn-lg">Aprender &raquo;</a></p>
+                    <h2 class="lead">Empareja sonidos con animales</h2>
+                    <center>
+                        <img class="img-responsive" src="~/Images/panelJuego.jpg" />
+                        <br />
+                    </center>
+                    <a href="http://localhost:51628/JuegoSonidos/Index" class="btn btn-primary btn-lg">Jugar &raquo;</a>
                 </div>
             </td>
         </tr>

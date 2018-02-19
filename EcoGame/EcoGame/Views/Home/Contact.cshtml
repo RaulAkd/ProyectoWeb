@@ -1,19 +1,84 @@
-﻿<div class="jumbotron" style="background-color:white; opacity: 0.8;">
-    @{
+﻿    @{
         ViewBag.Title = "Contact";
     }
-    <h2>@ViewBag.Title.</h2>
-    <h3>@ViewBag.Message</h3>
 
-    <address>
-        One Microsoft Way<br />
-        Redmond, WA 98052-6399<br />
-        <abbr title="Phone">P:</abbr>
-        425.555.0100
-    </address>
 
-    <address>
-        <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-        <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-    </address>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
+<style>
+    
+.red{
+    color:red;
+    }
+.form-area
+{
+    background-color: #FAFAFA;
+	padding: 10px 40px 60px;
+	margin: 10px 0px 60px;
+	border: 1px solid GREY;
+	}
+            nav{
+            background-color:black; 
+            opacity: 0.8;
+        }
+</style>
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+    <a class="navbar-brand" href="http://localhost:51628/Home/Index">Inicio</a>
+    <a class="navbar-brand" href="http://localhost:51628/Home/About">Acerca de nosotros</a>
+    <a class="navbar-brand" href="http://localhost:51628/Home/Contact">Contáctanos</a>
+</nav>
+<div class="jumbotron" style="background-color:white; opacity: 0.8;">
+    <center>
+        <div class="container">
+            <div class="col-md-5">
+                <div class="form-area">
+                    <form role="form">
+                        <br style="clear:both">
+                        <h3 style="margin-bottom: 25px; text-align: center;">Formulario de contacto</h3>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="email" name="email" placeholder="Correo electrónico" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="mobile" name="mobile" placeholder="Teléfono" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="subject" name="subject" placeholder="Asunto" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" type="textarea" id="message" placeholder="Mensaje" maxlength="140" rows="7"></textarea>
+                            <span class="help-block"><p id="characterLeft" class="help-block ">Has llegado al límite</p></span>
+                        </div>
+
+                        <button type="button" id="submit" name="submit" class="btn btn-primary pull-right">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </center>
 </div>
+<script>
+    $(document).ready(function () {
+        $('#characterLeft').text('140 caracteres restantes');
+        $('#message').keydown(function () {
+            var max = 140;
+            var len = $(this).val().length;
+            if (len >= max) {
+                $('#characterLeft').text('Has llegado al límite');
+                $('#characterLeft').addClass('red');
+                $('#btnSubmit').addClass('disabled');
+            }
+            else {
+                var ch = max - len;
+                $('#characterLeft').text(ch + ' caracteres restantes');
+                $('#btnSubmit').removeClass('disabled');
+                $('#characterLeft').removeClass('red');
+            }
+        });
+    });
+
+</script>
