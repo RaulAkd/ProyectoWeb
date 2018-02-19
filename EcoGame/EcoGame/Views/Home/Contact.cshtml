@@ -60,6 +60,7 @@
             </div>
         </div>
     </center>
+    <div id="alerta" class="alert alert-success"></div>
 </div>
 <script>
     $(document).ready(function () {
@@ -79,6 +80,11 @@
                 $('#characterLeft').removeClass('red');
             }
         });
+    });
+
+    
+    $("#submit").on("click", function () {
+        document.getElementById('alerta').innerHTML = "Muchas Gracias, tus datos fueron guardados con éxito";
     });
 
 </script>
