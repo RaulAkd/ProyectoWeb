@@ -74,6 +74,7 @@
         console.log("Empieza el prog");
         imagenes[cartas] = new Image();
         imagenes[cartas].src = "../Images/" + cartas + ".png";
+        console.log("la dir:%s",imagenes[cartas].src);
         cartas++;
         if (cartas < 12) {
             imagenes[cartas - 1].onload = cargarImagenes;
