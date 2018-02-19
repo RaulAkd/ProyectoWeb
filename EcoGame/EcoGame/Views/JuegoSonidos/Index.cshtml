@@ -6,21 +6,7 @@
 }
 <script src="~/Scripts/jquery-2.1.4.min.js"></script>
 <style>
-    .caja1 
-    {
-        width: 250px;
-        height: 200px;
-        background: #FCE8CC;
-        margin:5px;
-        float: left;
-        border-radius: 80%;
-     }
     
-    img
-    {
-        border-radius: 80%;
-    }
-
     h1
 	{
 		text-align:center;
@@ -28,8 +14,8 @@
 	
 	#miCanvas
 	{
-		border:dotted 2px yellow;
-		background:#0B0B61;
+		border:solid 5px #48E834;
+		background: rgba(76, 175, 80, 0.3);
 	}
 
 </style>
@@ -37,33 +23,25 @@
     <article>
 
         <canvas id="miCanvas"></canvas>
-        <audio id="0" src="~/sounds/0.WAV"</audio>
-        <audio id="1" src="~/sounds/1.WAV"</audio>
-        <audio id="2" src="~/sounds/2.WAV"</audio>
-        <audio id="3" src="~/sounds/3.WAV"</audio>
-        <audio id="4" src="~/sounds/4.WAV"</audio>
-        <audio id="5" src="~/sounds/5.WAV"</audio>
+        <audio id="0" src="~/sounds/0.WAV"></audio>
+        <audio id="1" src="~/sounds/1.WAV"></audio>
+        <audio id="2" src="~/sounds/2.WAV"></audio>
+        <audio id="3" src="~/sounds/3.WAV"></audio>
+        <audio id="4" src="~/sounds/4.WAV"></audio>
+        <audio id="5" src="~/sounds/5.WAV"></audio>
     
-        <div class="caja1">
-            <img id="img12" src="~/Images/12.jpg" width="250" height="200" onclick="sonido.play()"/>
-            <audio id="sonido" src="~/Sonidos/SummerParadise.mp3"></audio>
-        </div>
     </article>
     <br />
     <br />
-
     <a id="bh" href="#" class="btn btn-primary btn-lg">JUGAR DE NUEVO</a>
 </center>
 <script>
-    $(document).ready(function () {
-        var sonido = document.getElementById("sonido");
-    });
 
     var ctx, canvas;
     var primerCarta = true;
     var cartaPrimera, cartaSegunda;
-    var colorDelante = "#D8D8D8";
-    var colorAtras = "white";
+    var colorDelante = "#3574A9";
+    var colorAtras = "#14BE1C";
     var colorCanvas = "black";
     var inicioX = 30;
     var inicioY = 30;
@@ -324,7 +302,7 @@
     function aciertos() {
         ctx.save();
         ctx.clearRect(0, 480, canvas.width, canvas.height);
-        ctx.fillStyle = "gray"
+        ctx.fillStyle = "rgba(76, 175, 80, 0.3)"
         ctx.fillRect(0, 480, canvas.width, canvas.height);
         ctx.font = "bold 40px comic";
         ctx.fillStyle = "black";
