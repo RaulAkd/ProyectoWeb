@@ -38,5 +38,16 @@
             </td>
         </tr>
     </table>
+    <button id="bot" type="button" class="btn btn-primary btn-lg">
+        <span class="glyphicon glyphicon-play"></span>
+    </button>
+    <audio id="sonido" src="~/sounds/4.mp3"></audio>
+    
 </div>
 
+<script>
+    $("#bot").on("click", function () {
+        var sonido = document.getElementById("sonido");
+        sonido.play();
+    });
+</script>
